@@ -1,11 +1,348 @@
 <html>
     <head>
+        <link href="style.css" rel="stylesheet">
         <title>Jaan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @keyframes example1 {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+            }
+
+            /* The element to apply the animation to */
+            .example1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example1;
+            animation-duration: 4s;
+            }
+
+            /* The animation code */
+            @keyframes example2 {
+            0% {
+                background-color: red;
+            }
+            25% {
+                background-color: yellow;
+            }
+            50% {
+                background-color: blue;
+            }
+            100% {
+                background-color: green;
+            }
+            }
+
+            /* The element to apply the animation to */
+            .example2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example2;
+            animation-duration: 4s;
+            }
+
+            /* The animation code */
+            @keyframes example3 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: yellow;
+                left: 0px;
+                top: 200px;
+            }
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+            75% {
+                background-color: green;
+                left: 200px;
+                top: 0px;
+            }
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+            }
+
+            /* The element to apply the animation to */
+            .example3 {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: red;
+            animation-name: example3;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            }
+
+            #animated_div {
+            width: 100px;
+            height: 47px;
+            background: #92b901;
+            color: #ffffff;
+            position: relative;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            animation: animated_div 5s 1;
+            animation-iteration-count: infinite;
+            /* animation-direction: reverse; */
+            -moz-animation: animated_div 5s 1;
+            -webkit-animation: animated_div 5s 1;
+            -o-animation: animated_div 5s 1;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            animation-iteration-count: infinite;
+            }
+
+            @keyframes animated_div {
+            0% {
+                transform: rotate(0deg);
+                left: 0px;
+            }
+
+            25% {
+                transform: rotate(20deg);
+                left: 0px;
+            }
+            50% {
+                transform: rotate(0deg);
+                left: 500px;
+            }
+            55% {
+                transform: rotate(0deg);
+                left: 500px;
+            }
+            70% {
+                transform: rotate(0deg);
+                left: 500px;
+                background: #1ec7e6;
+            }
+            100% {
+                transform: rotate(-360deg);
+                left: 0px;
+            }
+            }
+
+            .example4 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            -webkit-animation-name: example4; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+            animation-name: example4;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            }
+
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes example4 {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+            }
+
+            /* Standard syntax */
+            @keyframes example4 {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+            }
+            * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .header {
+            background-color: #9e1ae0;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+                .container {
+                            position: relative;
+                        }
+
+                        .topleft {
+                            font-size: 18px;
+                        }
+                    img {
+                            position: relative;
+                            left: 0px;
+                            top: 0px;
+                            width: 50%;
+                            height: auto;
+                            opacity: 0.6;
+                        }
+                    body {
+                        font-family: helvetica, sans-serif;
+                            font-size: 14px;
+                            color: navy;
+                        }
+                    h1 {
+                        color: white;
+                         background-color: black;
+                        }
+
+                        p {
+                            color: red;
+                        }
+                    
+                        a {
+                            color: blue;
+                        }
+                        div {
+                            background-color:#eee;
+                            width: 200px;
+                            height: 70px;
+                            border: 1px dotted black;
+                            white-space: nowrap;
+                            
+                        }
+                        div {
+                            background-color: lightblue;
+                            width: 200px;
+                            height: 200px;
+                        }
+                        div {
+                            width: 100px;
+                            height: 100px;
+                            background: red;
+                        }
+
+                        div:hover {
+                            width: 300px;
+                        }
+                    
+            </style>
     </head>
     <body>
+        
+                <div class="example1">example1</div>
+                <div class="example2">example2</div>
+                <br>
+                <div class="example3">example3</div>
+            
+                <br>
+                <div class="example4">Animation with delays</div>
+            
+                <br>
+                <div id="animated_div">I'm just flying here.</div>
+     <div class="container">
+            <div class="topleft">Top Left</div>
+        </div>
+        <div></div>
+        <p>Hover over the div element above.</p>
+        <div>Some text to hide overflow text. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to hide overflow text. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to hide overflow text. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</div>
+        
                 <h1>
                     Welcome to my profile
                </h1>
+               <h2>Top</h2>
+                    
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">ICD0007</a></li>
+                    <li>CSS 2</li>
+                    </ul>
                <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/26171691_1538568532930635_4248711710444045484_o.jpg?oh=593b60107f00e8826ffe13099c453029&oe=5AE3110E"/>
                <br/>
                <h2>Enjoy my big pokerface</h2>
@@ -73,6 +410,38 @@
                 <td>Losing >3 goal lead </td>
             </tr>
         </table>
+        <form>
+            <label name="first-name">First name: </label>
+            <input name="first-name" type="text" />
+            <br/>
+            <label name"last-name" >Last name: </label>
+            <input name="last-name" type="text" />
+            <br/>
+            <label name="password" >password</label>
+            <input name="password" type="password"/>
+            <br/>
+            <label>skill level </label>
+            <br/>
+            <label name="beginner">beginner</label>
+            <input type="radio" name="skill" value="beginner" checked />
+            <label name="intermediate">intermediate</label>
+            <input type="radio" name="skill" value="intermediate" checked />
+            <label name="pro">pro</label>
+            <input type="radio" name="skill" value="pro" checked />
+            <br/>
+            <label name="gender">Gender </label>
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br/>
+            <label name="comments" ></label>
+            <textarea name="comments" rows="5" cols="15" ></textarea>
+            <br/>
+            <button>Submit</button>
+            <input type="submit"/>
+        </form>
+        <p>Exampe of a <strong>paragraph</strong>, with some words more <strong>important</strong> than others </p>
                
                 
     </body>
